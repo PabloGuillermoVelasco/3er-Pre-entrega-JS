@@ -1,0 +1,18 @@
+const inventarioProductos = [
+    {id:1, nombre: "Barrita de cereal", sabor: "Coco", presentacion: "unidad", stock: 100, img: '../assets/img/', alt: "Barrita coco", descripcion:""},
+    {id:2, nombre: "Barrita de cereal", sabor: "Miel", presentacion: "unidad", stock: 100, img: '../assets/img/', alt: "Barrita miel", descripcion:""},
+    {id:3, nombre: "Barrita de cereal", sabor: "Chocolate", presentacion: "unidad", stock: 100, img: '../assets/img/', alt: "Barrita chocolate", descripcion:""},
+    {id:4, nombre: "Barrita de cereal", sabor: "Coco", presentacion: "caja 12 unidades", stock: 30, img: '../assets/img/', alt: "Caja barritas coco", descripcion:""},
+    {id:5, nombre: "Barrita de cereal", sabor: "Miel", presentacion: "caja 12 unidades", stock: 30, img: '../assets/img/', alt: "Caja barritas miel", descripcion:""},
+    {id:6, nombre: "Barrita de cereal", sabor: "Chocolate", presentacion: "caja 12 unidades", stock: 30, img: '../assets/img/', alt: "Cajas barritas chocolate", descripcion:""},
+    {id:7, nombre: "Pasta de mani", sabor: "Original", presentacion: "250 gramos", stock: 50, img: '../assets/img/', alt: "Pasta de mani", descripcion:""},
+    {id:8, nombre: "Pasta de mani", sabor: "Original", presentacion: "500 gramos", stock: 50, img: '../assets/img/', alt: "Pasta de mani", descripcion:""},
+    {id:9, nombre: "Pasta de mani", sabor: "Original", presentacion: "1000 gramos", stock: 40, img: '../assets/img/', alt: "Pasta de mani", descripcion:""},
+    {id:10, nombre: "Chips de banana", sabor: "", presentacion: "x 250 gramos", stock: 50, img: '../assets/img/banana-chips.jpg', alt: "Chips banana", descripcion:""},
+    {id:11, nombre: "Mix frutos secos", sabor: "Nueces, almendras, mani y pasas de uva", presentacion: "500 gramos", stock: 50, img: '../assets/img/mix_frutos_secos.jpg', alt: "Frutos secos", descripcion:""},
+    {id:12, nombre: "Castañas de caju", sabor: "Con sal", presentacion: "250 gramos", stock: 50, img: '../assets/img/castañas.jpg', alt: "Castañas de cajú", descripcion:""},
+    {id:13, nombre: "Semillas de girasol", sabor: "Sin sal", presentacion: "500 gramos", stock: 40, img: '../assets/img/semillas_de_girasol.jpg', alt: "Semillas de girasol", descripcion:""},
+    {id:14, nombre: "Pasas de uva", sabor: "", presentacion: "x 250 gramos", stock: 50, img: '../assets/img/', alt: "Pasas de uva", descripcion:""},
+    {id:15, nombre: "Semillas de chia", sabor: "", presentacion: "250 gramos", stock: 50, img: '../assets/img/chia.jpg', alt: "Semillas de chia", descripcion:""},
+    {id:16, nombre: "Pistachos", sabor: "", presentacion: "500 gramos", stock: 50, img: '../assets/img/pistachos.jpeg', alt: "Pistachos", descripcion:""},
+]
