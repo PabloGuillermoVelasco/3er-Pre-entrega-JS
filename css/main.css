@@ -4,17 +4,25 @@
     box-sizing: border-box;
 }
 
+p{
+    color: #f1b317f1 !important;
+}
+
+
 body{
-    background-color: #f1ee9ef7 !important
+    background-color: #050505f7 !important
 }
 
 .pie {
-    background-color: #f1b317f1;
+    background-color: #676664f1;
     margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-.imagenPortada{
-    margin-top: 20px;
+.divPortada{
+    width: 100%;
+    height: 200px;
 }
 
 .fondoCarrito {
@@ -22,12 +30,12 @@ body{
 }
 
 .navbar .navbar-nav .nav-link {
-    color: #000000;
-    font-size: 1.1em;
+    color: white;
+    font-size: 1.2em;
 }
 
 .navbar .navbar-nav .nav-link:hover {
-    color: #f1b317f1;
+    color: white !important;
 }
 
 @media only screen and (min-width: 992px) {
@@ -36,22 +44,22 @@ body{
     }
 
     .navbar .navbar-nav {
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid #f1b317f1;
     }
 
     .navbar .nav-item {
-        padding: 0.5em 1em;
+        padding: 0.5em 1em 0em;
     }
 }
 
 .navbar .navbar-nav {
-    margin-top: 0.5em;
-    border-top: 2px solid #000;
+    margin-top: 1.5em;
+    border-top: 2px solid #f1b317f1;
 }
 
 .logoImg {
-    width: 260px;
-    height: 140px;
+    width: 300px;
+    height: 100px;
     border-radius: 10px;
 }
 
@@ -60,9 +68,14 @@ body{
 }
 
 .botonCarrito{
-    margin-right: 10px;
+    margin-left: 1600px;
 }
 
 input[type=number] {
     width: 70px;
 }
+
+.botonEliminar{
+    border: none;
+}
+

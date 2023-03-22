@@ -75,13 +75,13 @@ class ControladorCarrito {
                                                     ${producto.presentacion}</p>
                                             </div>
                                             <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                <button class="btn btn-link px-2"
+                                                <button id= "minus" class="btn btn-link px-2"
                                                     onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                                                     <i class="fas fa-minus"></i>
                                                 </button>
                                                 <input id="form1" min="1" name="quantity" value="1" type="number"
                                                     class="form-control form-control-sm text-center" />
-                                                <button class="btn btn-link px-2"
+                                                <button id="plus" class="btn btn-link px-2"
                                                     onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                                                     <i class="fas fa-plus"></i>
                                                 </button>
@@ -90,7 +90,7 @@ class ControladorCarrito {
                                                 <h5 class="mb-0">$${producto.precio}</h5>
                                             </div>
                                             <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                <button id="borrar${producto.id}"><i class="fa-solid fa-trash-can"></i></i></button>
+                                                <button id="borrar${producto.id}" class="botonEliminar"><i class="fa-solid fa-trash-can"></i></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -114,6 +114,7 @@ class ControladorCarrito {
             this.mostrarEnDom(contenedor_carrito);
         });
     }
+    
 
     }
 
@@ -131,6 +132,7 @@ controladorCarrito.levantarCarrito()
 //DOM
 const contenedor_productos = document.getElementById("contenedor_productos")
 const contenedor_carrito = document.getElementById("contenedor_carrito")
+const finalizarCompra = document.getElementById("finalizarCompra")
 
 
 //APP JS
@@ -151,3 +153,29 @@ controladorProductos.inventarioProductos.forEach(producto => {
 
 });
 
+//SWEETALERT
+finalizarCompra.addEventListener("click", () =>{
+
+    if(controladorCarrito.listaCarrito.lenght > 0){
+
+        controladorCarrito.vaciarCarrito()
+        controladorCarrito.mostrarEnDom(contenedor_carrito)
+
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Muchas gracias por su compra!',
+            text: "En breve será redirigido a la plataforma de pagos",
+            showConfirmButton: false,
+            timer: 2200
+    })
+    }else{
+        Swal.fire({
+            position: 'center',
+            icon: 'warning',
+            title: 'Su carrito esta vacío!',
+            showConfirmButton: false,
+            timer: 2200
+    })
+}
+})
