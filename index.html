@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3er Pre entrega</title>
+    <meta name="description" content="Productos 100% naturales y sanos">
+    <meta name="keywords" content="saludable, natural, barritas, cereal, frutos, secos, dieta, ejercicio">
+    <title>BARRUKA</title>
+    <link rel="shortcut icon" href="./assets/img/barruka_logo.png">
+    <link rel="stylesheet" href="./css/main.css">
     <!--CDN Fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -18,55 +22,42 @@
 <body>
     <header>
         <!--NAVBAR BS-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"></a>
-                <a href="./index.html"><img src="./assets/img/barruka_logo.png" class="img-fluid" alt="logobarruka"
-                        width="100" height="65"></img></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="./assets/img/barruka_logo.png" class="logoImg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbarToggler13"
+                aria-controls="myNavbarToggler13" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbarWidth" id="myNavbarToggler13">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Donde encontrarnos</a>
+                    </li>
+                </ul>
+                <!--Modal Trigger-->
+                <button type="button" class="btn btn-warning ml-auto botonCarrito" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <i class="fa-solid fa-cart-shopping"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
-                    </ul>
-                    <!--Modal Trigger-->
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </div>
             </div>
         </nav>
     </header>
 
+
     <main>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito</h1>
@@ -74,6 +65,16 @@
                     </div>
                     <div class="modal-body" id="contenedor_carrito">
 
+
+                    </div>
+                    <div class="card mb-5">
+                        <div class="card-body p-4">
+                            <div class="float-end">
+                                <p class="mb-0 me-5 d-flex align-items-center">
+                                    <span class="small text-muted me-2">Subtotal:</span><span class="lead fw-normal me-4">$500</span><span class="small text-muted me-2">IVA: </span><span class="lead fw-normal me-4">$200</span><span class="small text-muted me-2">Total:</span> <span class="lead fw-normal">$700</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-info" data-bs-dismiss="modal">Seguir comprando</button>
@@ -83,20 +84,29 @@
             </div>
         </div>
 
-        <h1 class="text-center mt-5 mb-5">Tienda - Barruka</h1>
+        <div>
+            <img src="./assets/img/banner_barruka.png" class="img-fluid imagenPortada" alt="logobarruka">
+        </div>
+
+        <h1 class="text-center mt-5 mb-5">Tienda</h1>
 
         <section id="contenedor_productos" class="container d-flex flex-wrap justify-content-center gap-5 ">
-            
+
         </section>
 
     </main>
 
+    <footer class="pie">
 
+        <p>footer</p>
+
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="./js/inventarioProductos.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
