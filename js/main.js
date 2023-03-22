@@ -35,6 +35,11 @@ class ControladorCarrito {
         this.listaCarrito = []
     }
 
+    borrar(producto){
+        let indice = this.listaCarrito.indexOf(producto)
+        this.listaCarrito.splice(indice,1)
+    }
+
     levantarCarrito() {
         let obtenerListaJSON = localStorage.getItem("listaCarrito")
 
@@ -46,6 +51,11 @@ class ControladorCarrito {
         this.listaCarrito.push(producto)
         let arrEnFormatoJSON = JSON.stringify(this.listaCarrito)
         localStorage.setItem("listaCarrito", arrEnFormatoJSON)
+    }
+
+    vaciarCarrito() {
+        this.listaCarrito = []
+        localStorage.removeItem("listaCarrito")
     }
 
     mostrarEnDom(contenedor_carrito) {
@@ -69,7 +79,7 @@ class ControladorCarrito {
                                                     onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                                                     <i class="fas fa-minus"></i>
                                                 </button>
-                                                <input id="form1" min="0" name="quantity" value="1" type="number"
+                                                <input id="form1" min="1" name="quantity" value="1" type="number"
                                                     class="form-control form-control-sm text-center" />
                                                 <button class="btn btn-link px-2"
                                                     onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
@@ -80,7 +90,7 @@ class ControladorCarrito {
                                                 <h5 class="mb-0">$${producto.precio}</h5>
                                             </div>
                                             <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                                                <button id="borrar${producto.id}"><i class="fa-solid fa-trash-can"></i></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -89,13 +99,26 @@ class ControladorCarrito {
                 </section>
                         `
         })
+
+        this.listaCarrito.forEach(producto =>{
+            document.getElementById(`borrar${producto.id}`).addEventListener("click", () => {
+                this.borrar(producto)
+                localStorage.setItem("listaCarrito", JSON.stringify(this.listaCarrito))
+                this.mostrarEnDom(contenedor_carrito)
+            })
+        })
+
+        const vaciarCarrito = document.getElementById('vaciarCarrito');
+        vaciarCarrito.addEventListener('click', () => {
+            this.vaciarCarrito();
+            this.mostrarEnDom(contenedor_carrito);
+        });
+    }
+
     }
 
 
 
-
-
-}
 
 //OBJETOS CONTROLADORES
 const controladorProductos = new ControladorProductos()
@@ -127,3 +150,4 @@ controladorProductos.inventarioProductos.forEach(producto => {
     })
 
 });
+

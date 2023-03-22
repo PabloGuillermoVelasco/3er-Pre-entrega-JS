@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #ddd9d9eb !important
+    background-color: #f1ee9ef7 !important
 }
 
 .pie {
@@ -61,4 +61,8 @@ body{
 
 .botonCarrito{
     margin-right: 10px;
+}
+
+input[type=number] {
+    width: 70px;
 }
