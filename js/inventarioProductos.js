@@ -21,38 +21,3 @@ const arrEnFormatoJSON = JSON.stringify(inventarioProductos)
 
 localStorage.setItem("inventarioProductos",arrEnFormatoJSON)
 
-/*let listaProductos;
-let obtenerListaJSON = localStorage.getItem("listaProductos")
-
-if(obtenerListaJSON){
-    listaProductos = JSON.parse(obtenerListaJSON)
-    
-}else{
-    listaProductos = []
-}
-
-console.log(listaProductos)
-
-const form = document.getElementById("formulario")
-
-
-form.addEventListener("submit", (e) => {
-
-    e.preventDefault()
-
-    const id = document.getElementById("id").value
-    const nombre = document.getElementById("nombre").value
-    const precio = document.getElementById("precio").value
-    const descripcion = document.getElementById("descripcion").value
-
-    listaProductos.push({id:id,nombre:nombre,precio:precio,descripcion:descripcion})
-
-    const listaProductosJSON = JSON.stringify( listaProductos )
-
-    localStorage.setItem("listaProductos",listaProductosJSON)
-
-    form.reset()
-
-    console.log(listaProductos)
-})
-*/
