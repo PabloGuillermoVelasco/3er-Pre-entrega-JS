@@ -4,20 +4,13 @@
     box-sizing: border-box;
 }
 
-p{
+.textoNaranja{
     color: #f1b317f1 !important;
 }
 
 
 body{
     background-color: #050505f7 !important
-}
-
-.pie {
-    background-color: #676664f1;
-    margin-top: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 .divPortada{
@@ -79,3 +72,41 @@ input[type=number] {
     border: none;
 }
 
+/*css footer*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+ul>li {
+    padding: 4px;
+    color:#C5CAE9;
+}
+
+ul>li:hover {
+    color: #957bda;
+    cursor: pointer
+}
+
+hr {
+    border-width: 3px
+}
+
+.cardFooter {
+    padding: 2% 3%;
+    background-color: #676664f1;
+    width: 100.7%;
+}
+
+.heading {
+    font-family: 'Titillium Web', sans-serif;
+    color: black
+}
+
+.divider {
+    border-top: 2px solid #f1b317f1
+}

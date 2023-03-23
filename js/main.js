@@ -156,7 +156,7 @@ controladorProductos.inventarioProductos.forEach(producto => {
 //SWEETALERT
 finalizarCompra.addEventListener("click", () =>{
 
-    if(controladorCarrito.listaCarrito.lenght > 0){
+    if(controladorCarrito.listaCarrito.length > 0){
 
         controladorCarrito.vaciarCarrito()
         controladorCarrito.mostrarEnDom(contenedor_carrito)
